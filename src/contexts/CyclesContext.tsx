@@ -72,7 +72,7 @@ export function CyclesContextProvider({
     const stateJSON = JSON.stringify(cyclesState);
 
     localStorage.setItem("@ignite-timer:cycles-state-1.0.0", stateJSON);
-  }, []);
+  }, [cyclesState]);
 
   function setSecondsPassed(seconds: number) {
     setAmountSecondsPassed(seconds);
@@ -117,6 +117,3 @@ export function CyclesContextProvider({
     </CyclesContext.Provider>
   );
 }
-
-// ver erro, ao dar f5 apos ter interrompido um ciclo, o mesmo volta das cinzas e continua contando
-// link do arquivo correto: https://github.com/rocketseat-education/02-ignite-timer/blob/280ad5e7452ab8dd68f0305f0010c93b83b8aaa7/src/contexts/CyclesContext.tsx
